@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Notifications page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              plusJakarta: ['Plus Jakarta Sans'],
+            },
+            colors: {
+              myBlue: '#0a317b',
+              myGrey: '#939dae',
+              lightGreyBlue1: '#f7fafd',
+              lightGreyBlue2: '#e5effa',
+              lightGreyBlue3: '#dde7ee',
+              darkGreyBlue1: '#939dae',
+              darkGreyBlue2: '#5e6778',
+              darkGreyBlue3: '#1c202b',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-lightGreyBlue1 flex items-center justify-center md:py-7">
+    <div
+      class="app px-4 py-6 font-plusJakarta max-w-4xl bg-white md:px-10 md:rounded-md md:shadow-md"
+    >
+      <header class="flex justify-between items-center mb-10">
+        <div class="flex gap-2 items-center">
+          <h1 class="text-xl font-bold">Notifications</h1>
+          <span
+            class="bg-myBlue py-0.5 px-3 text-white rounded-md font-semibold"
+            >3</span
+          >
+        </div>
+        <div class="cursor-pointer text-darkGreyBlue1 hover:text-myBlue">
+          Mark all as read
+        </div>
+      </header>
+      <main class="flex flex-col gap-3">
+        <div
+          class="unread bg-lightGreyBlue1 rounded-lg px-3 py-4 flex gap-2 items-start"
+        >
+          <img
+            src="./assets/images/avatar-mark-webber.webp"
+            alt="avatar-mark-webber"
+            class="w-10"
+          />
+          <div>
+            <div>
+              <p>
+                <span class="mr-1 font-bold hover:text-myBlue cursor-pointer"
+                  >Mark Webber
+                </span>
+                <span class="mr-1 font-light text-base">
+                  reacted to your recent post</span
+                >
+                <span
+                  class="inline-flex justify-center items-center gap-1 hover:text-myBlue cursor-pointer text-darkGreyBlue2 font-bold after:content-[''] after:inline-block after:w-2 after:h-2 after:ml-0.5 after:bg-red-500 after:rounded-full"
+                  >My first tournament today!</span
+                >
+              </p>
+            </div>
+            <div class="font-light text-sm">1m ago</div>
+          </div>
+        </div>
+        <div
+          class="unread bg-lightGreyBlue1 rounded-lg px-3 py-4 flex gap-2 items-start"
+        >
+          <img
+            src="./assets/images/avatar-angela-gray.webp"
+            alt="avatar-mark-webber"
+            class="w-10"
+          />
+          <div>
+            <div>
+              <span class="mr-1 font-bold hover:text-myBlue cursor-pointer"
+                >Angela Grey</span
+              >
+              <span
+                class="font-light text-base inline-flex justify-center items-center gap-1 after:content-[''] after:inline-block after:w-2 after:h-2 after:ml-0.5 after:bg-red-500 after:rounded-full"
+              >
+                Followed you</span
+              >
+            </div>
+            <div class="font-light text-sm">5m ago</div>
+          </div>
+        </div>
+        <div
+          class="unread bg-lightGreyBlue1 rounded-lg px-3 py-4 flex gap-2 items-start"
+        >
+          <img
+            src="./assets/images/avatar-jacob-thompson.webp"
+            alt="avatar-mark-webber"
+            class="w-10"
+          />
+          <div>
+            <div>
+              <span class="mr-1 font-bold hover:text-myBlue cursor-pointer"
+                >Jacob Thompson</span
+              >
+              <span class="mr-1 font-light text-base">
+                has joined your group</span
+              >
+              <span
+                class="font-bold text-myBlue cursor-pointer inline-flex justify-center items-center gap-1 after:content-[''] after:inline-block after:w-2 after:h-2 after:ml-0.5 after:bg-red-500 after:rounded-full"
+                >Chess Club</span
+              >
+            </div>
+            <div class="font-light text-sm">1 day ago</div>
+          </div>
+        </div>
+        <div class="rounded-lg px-3 py-4 flex gap-2 items-start">
+          <img
+            src="./assets/images/avatar-rizky-hasanuddin.webp"
+            alt="avatar-mark-webber"
+            class="w-10"
+          />
+          <div>
+            <div>
+              <span class="mr-1 font-bold hover:text-myBlue cursor-pointer"
+                >Rizky Hasanuddin</span
+              >
+              <span class="mr-1 font-light text-base"
+                >sent you a private message</span
+              >
+            </div>
+            <div class="font-light text-sm">5 days ago</div>
+            <div
+              class="rounded-xl border-2 border-lightGreyBlue2 p-3 mt-3 cursor-pointer hover:bg-lightGreyBlue2"
+            >
+              Hello,thanks for setting up the Chess Club. I've been a member for
+              a few weeks now and I'm already having lots of fun and improving
+              my game.
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg px-3 py-4 flex gap-2 items-start">
+          <img
+            src="./assets/images/avatar-kimberly-smith.webp"
+            alt="avatar-mark-webber"
+            class="w-10"
+          />
+          <div class="flex justify-between items-start gap-3 w-full">
+            <div>
+              <div>
+                <span class="mr-1 font-bold hover:text-myBlue cursor-pointer"
+                  >Kimberly Smith</span
+                >
+                <span class="mr-1 font-light text-base">
+                  commented on your picture</span
+                >
+              </div>
+              <div class="font-light text-sm">5m ago</div>
+            </div>
+            <img
+              src="./assets/images/image-chess.webp"
+              alt="image-chess"
+              class="w-10"
+            />
+          </div>
+        </div>
+        <div class="rounded-lg px-3 py-4 flex gap-2 items-start">
+          <img
+            src="./assets/images/avatar-nathan-peterson.webp"
+            alt="avatar-mark-webber"
+            class="w-10"
+          />
+          <div>
+            <div>
+              <span class="mr-1 font-bold hover:text-myBlue cursor-pointer"
+                >Nathan Peterson</span
+              >
+              <span class="mr-1 font-light text-base">
+                reacted to your recent post</span
+              >
+              <span
+                class="mr-1 hover:text-myBlue cursor-pointer text-darkGreyBlue2 font-bold"
+                >5 end-game strategies to increase your win rate</span
+              >
+            </div>
+            <div class="font-light text-sm">2 weeks ago</div>
+          </div>
+        </div>
+        <div class="rounded-lg px-3 py-4 flex gap-2 items-start">
+          <img
+            src="./assets/images/avatar-anna-kim.webp"
+            alt="avatar-mark-webber"
+            class="w-10"
+          />
+          <div>
+            <div>
+              <span class="mr-1 font-bold hover:text-myBlue cursor-pointer"
+                >Anna Kim</span
+              >
+              <span class="mr-1 font-light text-base"> left the group</span>
+              <span class="mr-1 font-bold text-myBlue cursor-pointer"
+                >Chess Club</span
+              >
+            </div>
+            <div class="font-light text-sm">2 weeks ago</div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- 
+     Rizky Hasanuddin sent you a private message 5 days ago 
+     Hello,thanks for setting up the Chess Club. I've been a member for a few weeks now
+    and I'm already having lots of fun and improving my game. 
+
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
